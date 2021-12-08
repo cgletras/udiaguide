@@ -41,11 +41,11 @@ public class AttractionsPageAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.cinemas);
+            return mContext.getString(R.string.nature);
         } else if (position == 1) {
             return mContext.getString(R.string.museum);
         } else if (position == 2) {
-            return mContext.getString(R.string.nature);
+            return mContext.getString(R.string.cinemas);
         } else {
             return mContext.getString(R.string.parks);
         }
@@ -55,11 +55,11 @@ public class AttractionsPageAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0){
-            return new CinemaFragment();
+            return new NatureFragment();
         } else if (position == 1){
             return new MuseumsFragment();
         } else if (position ==2){
-            return new NatureFragment();
+            return new CinemaFragment();
         } else {
             return new ParksSquaresGardensFragment();
         }

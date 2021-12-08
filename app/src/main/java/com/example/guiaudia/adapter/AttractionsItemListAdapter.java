@@ -33,7 +33,7 @@ public class AttractionsItemListAdapter extends ArrayAdapter<TouristicAttraction
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.item_list_fragment, parent, false
+                    R.layout.item_list_attractions, parent, false
             );
         }
 

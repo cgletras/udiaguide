@@ -37,20 +37,19 @@ public class CinemaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.attractions_list_frag_layout, container, false);
 
         //Set list
         ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
 
         attractions.add(new TouristicAttraction("Cinemark", R.drawable.cinemark, "Rua João Naves de Ávila, 162"));
         attractions.add(new TouristicAttraction("Cinepolis", R.drawable.cinepolis, "Rua João Naves de Ávila, 162"));
-        attractions.add(new TouristicAttraction("Park", R.drawable.sabia, "Rua João Naves de Ávila, 162"));
 
         //Declare the adapter
         AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);
 
         //set the list view
-        ListView listView = (ListView) rootView.findViewById(R.id.lv_fragments);
+        ListView listView = (ListView) rootView.findViewById(R.id.lv_attractions);
 
         //Set listView adapter
         listView.setAdapter(adapter);

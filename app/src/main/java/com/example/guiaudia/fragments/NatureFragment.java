@@ -7,8 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.guiaudia.R;
+import com.example.guiaudia.TouristicAttraction;
+import com.example.guiaudia.adapter.AttractionsItemListAdapter;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,50 +22,44 @@ import com.example.guiaudia.R;
  */
 public class NatureFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public NatureFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NatureFragment.
-     */
     // TODO: Rename and change types and number of parameters
-    public static NatureFragment newInstance(String param1, String param2) {
+    public static NatureFragment newInstance() {
         NatureFragment fragment = new NatureFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.attractions_list_frag_layout, container, false);
+
+        //Set list
+        ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
+
+        attractions.add(new TouristicAttraction("Cachoeira Sucupira", R.drawable.cahoeirasucupira, "https://goo.gl/maps/71dRXyGJkdRdPqvY6"));
+        attractions.add(new TouristicAttraction("Cachoeira Bom Jardim", R.drawable.cachoeirabomjardim, "https://goo.gl/maps/htdieQDKmc4exkmV8"));
+        attractions.add(new TouristicAttraction("Cachoeira das Irmãs", R.drawable.cachoeiradasirmas, "https://goo.gl/maps/G4QLDNqjxR67EdMTA"));
+        attractions.add(new TouristicAttraction("Cachoeira dos Namorados", R.drawable.cachoeiradosnamorados, "https://goo.gl/maps/vE4wN6kTzZfu2saS9"));
+        attractions.add(new TouristicAttraction("Cachoeira da Fumaça", R.drawable.cachoeiradafumaca, "https://goo.gl/maps/rcuL7ZDkYfFxgiCj6"));
+
+
+
+        //Declare the adapter
+        AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);
+
+        //set the list view
+        ListView listView = (ListView) rootView.findViewById(R.id.lv_attractions);
+
+        //Set listView adapter
+        listView.setAdapter(adapter);
+
+        return rootView;
     }
 }
