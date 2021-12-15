@@ -1,8 +1,8 @@
 package com.example.guiaudia;
 
 public class TouristicAttraction {
-    private String mName;
-    private Integer mImageId;
+    private final String mName;
+    private final Integer mImageId;
     private String mAddress;
     private String mLatitude;
     private String mLongitude;

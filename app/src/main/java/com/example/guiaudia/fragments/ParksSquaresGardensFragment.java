@@ -1,13 +1,12 @@
 package com.example.guiaudia.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.guiaudia.R;
 import com.example.guiaudia.TouristicAttraction;
@@ -53,7 +52,7 @@ public class ParksSquaresGardensFragment extends Fragment {
         AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);
 
         //set the list view
-        ListView listView = (ListView) rootView.findViewById(R.id.lv_attractions);
+        ListView listView = rootView.findViewById(R.id.lv_attractions);
 
         //Set listView adapter
         listView.setAdapter(adapter);

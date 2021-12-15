@@ -49,7 +49,7 @@ public class CinemaFragment extends Fragment {
         AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);
 
         //set the list view
-        ListView listView = (ListView) rootView.findViewById(R.id.lv_attractions);
+        ListView listView = rootView.findViewById(R.id.lv_attractions);
 
         //Set listView adapter
         listView.setAdapter(adapter);
