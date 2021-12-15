@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingVertical="5dp"
-            android:text="@string/como_chegar"
+            android:text="@string/how_to_go"
             android:textAllCaps="true"
             android:textSize="16sp"
             android:textStyle="bold" />
