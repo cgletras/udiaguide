@@ -43,9 +43,9 @@ public class ParksSquaresGardensFragment extends Fragment {
         //Set list
         ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
 
-        attractions.add(new TouristicAttraction("Parque do Sabiá", R.drawable.parquedosabia, "R. Haia, s/n - Tibery, Uberlândia"));
+        attractions.add(new TouristicAttraction("Parque do Sabiá", R.drawable.parquedosabia, "Av. Anselmo Alves dos Santos, 3090"));
         attractions.add(new TouristicAttraction("Parque Municipal Santa Luzia", R.drawable.parquesantaluzia, "Av. Alípio Abraão, 602"));
-        attractions.add(new TouristicAttraction("Parque Linear Lagoinha", R.drawable.parquesantaluzia, "Av. Antônio Francisco Lisboa, 131-211"));
+        attractions.add(new TouristicAttraction("Parque Linear Lagoinha", R.drawable.parquelagoinha, "Av. Antônio Francisco Lisboa, 131-211"));
 
 
 

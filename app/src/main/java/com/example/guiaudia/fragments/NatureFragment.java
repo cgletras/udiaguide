@@ -43,13 +43,11 @@ public class NatureFragment extends Fragment {
         //Set list
         ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
 
-        attractions.add(new TouristicAttraction("Cachoeira Sucupira", R.drawable.cahoeirasucupira, "https://goo.gl/maps/71dRXyGJkdRdPqvY6"));
-        attractions.add(new TouristicAttraction("Cachoeira Bom Jardim", R.drawable.cachoeirabomjardim, "https://goo.gl/maps/htdieQDKmc4exkmV8"));
-        attractions.add(new TouristicAttraction("Cachoeira das Irmãs", R.drawable.cachoeiradasirmas, "https://goo.gl/maps/G4QLDNqjxR67EdMTA"));
-        attractions.add(new TouristicAttraction("Cachoeira dos Namorados", R.drawable.cachoeiradosnamorados, "https://goo.gl/maps/vE4wN6kTzZfu2saS9"));
-        attractions.add(new TouristicAttraction("Cachoeira da Fumaça", R.drawable.cachoeiradafumaca, "https://goo.gl/maps/rcuL7ZDkYfFxgiCj6"));
-
-
+        attractions.add(new TouristicAttraction("Cachoeira Sucupira", R.drawable.cahoeirasucupira, "-18.986757", "-48.1687354"));
+        attractions.add(new TouristicAttraction("Cachoeira Bom Jardim", R.drawable.cachoeirabomjardim, "-19.001418","-48.2723114"));
+        attractions.add(new TouristicAttraction("Cachoeira das Irmãs", R.drawable.cachoeiradasirmas, "-18.6699712","-48.0705498"));
+        attractions.add(new TouristicAttraction("Cachoeira dos Namorados", R.drawable.cachoeiradosnamorados, "-18.9902353","-48.1756701"));
+        attractions.add(new TouristicAttraction("Cachoeira da Fumaça", R.drawable.cachoeiradafumaca, "-19.2228403","-47.8111266"));
 
         //Declare the adapter
         AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);

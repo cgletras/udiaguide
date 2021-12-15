@@ -42,8 +42,8 @@ public class CinemaFragment extends Fragment {
         //Set list
         ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
 
-        attractions.add(new TouristicAttraction("Cinemark", R.drawable.cinemark, "Rua João Naves de Ávila, 162"));
-        attractions.add(new TouristicAttraction("Cinepolis", R.drawable.cinepolis, "Rua João Naves de Ávila, 162"));
+        attractions.add(new TouristicAttraction("Cinemark", R.drawable.cinemark, "Av. Paulo Gracindo, 15"));
+        attractions.add(new TouristicAttraction("Cinepolis", R.drawable.cinepolis, "Av. João Naves de Ávila, 1331"));
 
         //Declare the adapter
         AttractionsItemListAdapter adapter = new AttractionsItemListAdapter(getActivity(), attractions);

@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +19,7 @@ import com.example.guiaudia.TouristicAttraction;
 import java.util.List;
 
 public class AttractionsItemListAdapter extends ArrayAdapter<TouristicAttraction> {
+
     public AttractionsItemListAdapter(@NonNull Context context, int resource) {
         super(context, resource);
     }
@@ -54,11 +54,20 @@ public class AttractionsItemListAdapter extends ArrayAdapter<TouristicAttraction
         attractionAddress.setText(currentItemAttraction.getmAddress());
         attractionImage.setImageResource(currentItemAttraction.getmImageId());
 
+        // City+Hall,New+York,NY
+
         mapIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "TESTE", Toast.LENGTH_SHORT).show();
-                Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+                String geo = "geo:0,0?q=";
+
+                if (currentItemAttraction.getmAddress().equals(TouristicAttraction.NO_ADDRESS)) {
+                    geo = "geo:" + currentItemAttraction.getmLatitude() + "," + currentItemAttraction.getmLongitude();
+                } else {
+                    geo = geo + currentItemAttraction.getmAddress().replaceAll(" ", "+");
+                }
+
+                Uri gmmIntentUri = Uri.parse(geo);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 if (mapIntent.resolveActivity(getContext().getPackageManager()) != null) {
