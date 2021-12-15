@@ -43,7 +43,7 @@ public class NatureFragment extends Fragment {
         //Set list
         ArrayList<TouristicAttraction> attractions = new ArrayList<TouristicAttraction>();
 
-        attractions.add(new TouristicAttraction("Cachoeira Sucupira", R.drawable.cahoeirasucupira, "-18.986757", "-48.1687354"));
+        attractions.add(new TouristicAttraction("Cachoeira Sucupira", R.drawable.cahoeirasucupira, "-18.9091004","-48.2603635"));
         attractions.add(new TouristicAttraction("Cachoeira Bom Jardim", R.drawable.cachoeirabomjardim, "-19.001418","-48.2723114"));
         attractions.add(new TouristicAttraction("Cachoeira das Irmãs", R.drawable.cachoeiradasirmas, "-18.6699712","-48.0705498"));
         attractions.add(new TouristicAttraction("Cachoeira dos Namorados", R.drawable.cachoeiradosnamorados, "-18.9902353","-48.1756701"));
